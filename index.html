@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Digital Raffle - Win a PlayStation 5 Pro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec6d",
+                        "background-light": "#f6f8f7",
+                        "background-dark": "#102218",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen pb-32">
+<!-- Top App Bar -->
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-primary/10 px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-900 dark:text-white cursor-pointer">arrow_back</span>
+</div>
+<h1 class="text-lg font-bold tracking-tight">RIFA VENEZUELA</h1>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-900 dark:text-white href="https://resultados.html" cursor-pointer">verified</span>
+</div>
+</nav>
+<!-- Hero Section -->
+<div class="relative w-full h-25 overflow-hidden bg-slate-100">
+<img alt="PlayStation 5 Pro Gaming Console" class="w-full h-full object-cover" data-alt="PlayStation 5 Pro gaming console on dark background" src="https://i.wpfc.ml/bb/keeoup.png"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-6">
+<span class="inline-block bg-primary text-black text-xs font-bold px-2 py-1 rounded mb-2 w-max">RIFA ACTIVA</span>
+<h2 class="text-white text-2xl font-bold leading-tight">Productos alimenticios </h2>
+<p class="text-white/80 text-sm">Nueva experiencia en rifas onlines</p>
+</div>
+</div>
+
+<!-- Raffle Details Card -->
+<div class="mx-4 -mt-6 relative z-10 bg-white dark:bg-slate-900 rounded-xl shadow-xl p-5 border border-primary/10">
+<div class="flex justify-between items-center mb-4">
+<div>
+<p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Precio</p>
+<p class="text-2xl font-bold text-primary">$1.00</p>
+</div>
+<div class="text-right">
+<p class="text-xs text-slate-500 uppercase tracking-wider font-semibold">Fecha sorteo</p>
+<p class="text-sm font-bold">Marzo 13/2026</p>
+</div>
+</div>
+<span class="text-sm font-medium">SORTEO CHANCE "A" 8:00Pm</span>
+<div class="space-y-2">
+<div class="flex justify-between items-end">
+<span class="text-sm font-medium">Progreso rifa</span>
+<span class="text-xs font-bold text-primary">00/100 comprado (100%)</span>
+</div>
+<div class="w-full h-3 bg-primary/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 0%;"></div>
+</div>
+<p class="text-[10px] text-slate-400 italic">El ganador sera publicado por este medio</p>
+</div>
+</div>
+<!-- Instructions & Legend -->
+<div class="px-4 py-6">
+<h3 class="text-lg font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">grid_view</span>
+            Selecciona tu numero
+        </h3>
+<div class="flex gap-4 mb-6">
+<div class="flex items-center gap-1.5">
+<div class="w-3 h-3 rounded-sm bg-white border border-slate-300"></div>
+<span class="text-xs text-slate-600 dark:text-slate-400">Disponible</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-3 h-3 rounded-sm bg-slate-200 border border-slate-200"></div>
+<span class="text-xs text-slate-600 dark:text-slate-400">Apartado</span>
+</div>
+<div class="flex items-center gap-1.5">
+<div class="w-3 h-3 rounded-sm bg-primary"></div>
+<span class="text-xs text-slate-600 dark:text-slate-400">Vendido</span>
+</div>
+</div>
+<!-- Numbers Grid -->
+<div class="grid grid-cols-10 gap-1.5"><!-- Numbers 01-99 -->
+<button class="aspect-square flex items-center justify-center border border-slate-200 bg-slate-200 text-slate-400 rounded-md cursor-not-allowed text-[10px] font-bold line-through">01</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">02</button>
+<button class="aspect-square flex items-center justify-center bg-primary text-black rounded-md text-[10px] font-bold shadow-sm shadow-primary/20">03</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">04</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">05</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">06</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">07</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">08</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">09</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">10</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">11</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">12</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">13</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">14</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">15</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">16</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">17</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">18</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">19</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">20</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">21</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">22</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">23</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">24</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">25</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">26</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">27</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">28</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">29</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">30</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">31</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">32</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">33</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">34</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">35</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">36</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">37</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">38</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">39</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">40</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">41</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">42</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">43</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">44</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">45</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">46</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">47</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">48</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">49</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">50</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">51</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">52</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">53</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">54</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">55</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">56</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">57</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">58</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">59</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">60</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">61</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">62</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">63</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">64</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">65</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">66</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">67</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">68</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">69</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">70</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">71</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">72</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">73</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">74</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">75</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">76</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">77</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">78</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">79</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">80</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">81</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">82</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">83</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">84</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">85</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">86</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">87</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">88</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">89</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">90</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">91</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">92</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">93</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">94</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">95</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">96</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">97</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">98</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">99</button>
+<button class="aspect-square flex items-center justify-center border border-primary text-primary bg-white dark:bg-slate-800 rounded-md text-[10px] font-bold">00</button>
+
+
+<div class="p-3  flex-1">
+</h1>
+
+</div>
+</div>
+
+
+<!-- Product Card 6 -->
+<div class="bg-white dark:bg-slate-800 rounded-xl overflow-hidden shadow-sm border border-primary/5 flex flex-col">
+<div class="aspect-square w-full relative">
+<div class="relative w-full h-42 overflow-hidden bg-slate-100">
+<img alt="Red Sneakers" class="w-full h-full object-cover" data-alt="Vibrant red athletic running shoes" src="
+https://i.wpfc.ml/ba/kdmmwg.jpg" />
+</div>
+
+<div class="p-3 flex flex-col flex-1">
+<p class="text-lg font-bold text-primary mb-3">Rifa productos alimenticios.!</p>
+
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-200 line-clamp-1 mb-1">Premios.:</h3>
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-200 line-clamp-1 mb-1">(1) Bulto de Harina pan</h3>
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-200 line-clamp-1 mb-1">(4) Kg de Azucar</h3>
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-200 line-clamp-1 mb-1">(5) Kg de Pasta de 1Kg</h3>
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-200 line-clamp-1 mb-1">(2) Litros de Aceites</h3>
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-200 line-clamp-1 mb-1">(2) Kg de Harina trigo Mary</h3>
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-200 line-clamp-1 mb-1">(2) Margarina Mavesa 500gr</h3>
+<h3 class="text-sm font-medium text-slate-700 dark:text-slate-200 line-clamp-1 mb-1">(1) Cartón de Huevos</h3>
+
+
+<br>
+
+
+
+<!-- Condiciones del Sorteo -->
+
+<div class="p-3 flex flex-col flex-1">
+
+<div class="border-t border-surface/10 pt-6 mt-2">
+<ul class="flex flex-col gap-2">
+<li class="flex items-start gap-2"><p></p>
+
+
+<!-- Información del Pago -->
+
+
+<!-- Payment Instructions Section -->
+<section class="space-y-6">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">payments</span>
+<h3 class="font-headline font-bold text-lg text-on-surface">Datos de Pago Móvil</h3>
+</div>
+<!-- Payment Data Card -->
+<div class="bg-surface-container-low rounded-3xl p-8 space-y-2">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-1">
+<label class="font-label text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Banco</label>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">account_balance</span>
+<p class="font-headline font-bold text-on-surface">Banco Mercantil</p>
+</div>
+</div>
+
+<div class="space-y-1">
+<label class="font-label text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Teléfono</label>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">phone_iphone</span>
+<p class="font-headline font-bold text-on-surface">(0412) 902.95.50</p>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label text-[11px] font-bold uppercase tracking-wider text-on-surface-variant">Cédula de Identidad</label>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-sm">badge</span>
+<p class="font-headline font-bold text-on-surface">V-20.803.277</p>
+</div>
+</div>
+<div class="flex items-end">
+<div class="bg-primary/5 rounded-xl px-4 py-2 border border-primary/30 flex items-center gap-2 w-full">
+<span class="material-symbols-outlined text-primary text-xs">info</span>
+<p class="text-[11px] text-on-primary-container leading-tight">Por favor, realice el pago antes de reportar el número de referencia.</p>
+</div>
+</div>
+</div>
+</div>
+
+
+<!-- Trust Indicator -->
+<div class="flex items-center justify-center gap-2 py-4 text-on-surface-variant opacity-70">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<p class="text-[11px] font-bold uppercase tracking-[0.1em]">Transacción 100% Protegida</p>
+</div>
+</main>
+
+
+<a class="mt-auto flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-xs font-bold transition-all active:scale-95" href="https://wa.me/+584129029550?text=!Quiero%20participar%20en el%20sorteo!">
+<span class="material-symbols-outlined text-sm">chat</span>
+                        Solicitar número!
+                    </a>
+</div>
+</div>
+</div>
+
+
+<!-- Condiciones del Sorteo -->
+
+<div class="p-3 flex flex-col flex-1">
+
+<div class="border-t border-surface/10 pt-6 mt-2">
+<h4 class="text-[15px] font-bold uppercase tracking-widest text-surface/60 mb-3">Condiciones del Sorteo</h4>
+<ul class="flex flex-col gap-2">
+<li class="flex items-start gap-2">
+<span class="text-[8px] mt-1 opacity-40">●</span>
+<p class="text-[9px] leading-relaxed opacity-60 font-medium">El premio será entregado únicamente al portador del código de verificación válido.</p>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[8px] mt-1 opacity-40">●</span>
+<p class="text-[9px] leading-relaxed opacity-60 font-medium">El sorteo se realizará de forma digital y transparente en la fecha estipulada, por la agencia de lotería Chance en el horario estipulando.</p>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[8px] mt-1 opacity-40">●</span>
+<p class="text-[9px] leading-relaxed opacity-60 font-medium">RIFA VENEZUELA se reserva el derecho de validación de identidad al momento del reclamo del premio,.</p>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[8px] mt-1 opacity-40">●</span>
+<p class="text-[9px] leading-relaxed opacity-60 font-medium">Los premios no podrán ser cambiado a otra persona por dinero. ni algún otro bien </p>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[8px] mt-1 opacity-40">●</span>
+<p class="text-[9px] leading-relaxed opacity-60 font-medium">El ganador Dispondrá de (2) día a partir del momento, que se realiza el sorteo para el retiro del premio, de lo contrario perderá el derecho de algún reclamo</p>
+</li>
+
+
+
+
+
+
+<!-- Información del Sorteo -->
+
+<div class="p-3 flex flex-col flex-1">
+
+<div class="border-t border-surface/10 pt-6 mt-2">
+<h4 class="text-[15px] font-bold uppercase tracking-widest text-surface/30 mb-3">Información del Sorteo</h4>
+<ul class="flex flex-col gap-2">
+<li class="flex items-start gap-2">
+<span class="text-[8px] mt-1 opacity-40">●</span>
+<p class="text-[9px] leading-relaxed opacity-60 font-medium">Los sorteos de realizará a través de la agencia de lotería Chance "A" a la hora estipulada.</p>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[8px] mt-1 opacity-40">●</span>
+<p class="text-[9px] leading-relaxed opacity-60 font-medium">rifa Venezuela, hará público al ganador del sorteo, para su transparencia y legalidad.</p>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[8px] mt-1 opacity-40">●</span>
+<p class="text-[9px] leading-relaxed opacity-60 font-medium">La persona que acierte su número en la (B) del mismo sorteo y hora. se le otorgará (1) ticket Gratis para el siguiente sorteo..</p>
+</li>
+<li class="flex items-start gap-2">
+<span class="text-[8px] mt-1 opacity-40">●</span>
+<p class="text-[9px] leading-relaxed opacity-60 font-medium">De requerir Delivery, aplicará costo adicional. lo cual se hará cargo el ganador de cancelarlo.</p>
+</li>
+
+
+<br>
+<br>
+
+<a class="mt-auto flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white py-2.5 rounded-lg text-xs font-bold transition-all active:scale-95" href="https://tuchance.com.ve/">
+<span class="material-symbols-outlined text-sm">verified</span>
+                      RESULTADOS LOTERIA 
+                    </a>
+</div>
+
+
+
+<!-- Fixed Action Bar (Replaces BottomNavBar in focused task) -->
+<div class="fixed bottom-0 left-0 w-full bg-surface-container-lowest/80 backdrop-blur-xl px-6 py-6 pb-10 border-t-0 shadow-[0_-8px_30px_rgba(0,0,0,0.04)] z-50">
+
+<p class="text-center text-[10px] text-on-surface-variant px-8 leading-relaxed">
+                Al continuar, aceptas nuestros términos y condiciones. Los comprobantes de pago son validados en un máximo de 15 min.
+            </p>
